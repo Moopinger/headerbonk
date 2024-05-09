@@ -368,7 +368,7 @@ fastly-client-ip
 fastly-ff
 fastly-host
 fastly-ssl
-hos t
+host
 host\u0074
 if-none-match
 if-range
