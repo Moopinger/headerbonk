@@ -9,3 +9,8 @@ cd headerbonk
 pip install -r requirements.txt
 python3 main.py
 ```
+## Usage
+
+```
+python3 main.py -c canarymoo123 -u https://www.yahoo.com/moo.css
+```
