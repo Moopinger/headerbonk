@@ -21,7 +21,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('-u', '--url', help='URL to send requests to')
     parser.add_argument('-f', '--file', help='File containing URLs to send requests to')
-    parser.add_argument('-c', '--canary', required=True, help='Canary value')
+    parser.add_argument('-c', '--canary', default="x1x2x3x4x5", help='Canary value')
     parser.add_argument('-n', '--num-headers', type=int, default=10, help='Number of headers to add per request')
     
     counter = 1
@@ -92,7 +92,7 @@ def main():
             for header in header_batch:
                 headers[header] = args.canary
 
-            params = {random_string(): args.canary}
+            params = {random_string(): random_string()}
             response = requests.get(url, headers=headers, params=params, verify=False, proxies=proxies)
             response_size = len(response.text)
             response_status = response.status_code
@@ -108,7 +108,7 @@ def main():
                     }
 
                     headers[header] = args.canary
-                    params = {random_string(): args.canary}
+                    params = {random_string(): random_string()}
                     response = requests.get(url, headers=headers, params=params, verify=False, proxies=proxies)
                     response_size = len(response.text)
                     response_status = response.status_code
