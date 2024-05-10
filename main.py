@@ -92,7 +92,7 @@ def main():
             for header in header_batch:
                 headers[header] = args.canary
 
-            params = {random_string(): args.canary}
+            params = {random_string(): random_string()}
             response = requests.get(url, headers=headers, params=params, verify=False, proxies=proxies)
             response_size = len(response.text)
             response_status = response.status_code
@@ -108,7 +108,7 @@ def main():
                     }
 
                     headers[header] = args.canary
-                    params = {random_string(): args.canary}
+                    params = {random_string(): random_string()}
                     response = requests.get(url, headers=headers, params=params, verify=False, proxies=proxies)
                     response_size = len(response.text)
                     response_status = response.status_code
