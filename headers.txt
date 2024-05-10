@@ -72,9 +72,6 @@ Age
 Alt-Svc
 Apigw-Requestid
 Authority
-Authorization Basic dddd
-Authorization Bearer sssssss
-Authorization null
 Backoff-Policy
 CDN-Loop
 CF-Connecting-IP
@@ -264,7 +261,7 @@ X-Goog-Storage-Class
 X-Goog-Stored-Content-Encoding
 X-Goog-Stored-Content-Length
 X-Guploader-Uploadid
-X-Guploader-Uploadid 
+X-Guploader-Uploadid
 X-Gw-Auth
 X-Hs-Https-Only
 X-Http-Method-Override
