@@ -22,7 +22,7 @@ def main():
     parser.add_argument('-u', '--url', help='URL to send requests to')
     parser.add_argument('-f', '--file', help='File containing URLs to send requests to')
     parser.add_argument('-c', '--canary', required=True, help='Canary value')
-    parser.add_argument('-n', '--num-headers', type=int, default=1, help='Number of headers to add per request')
+    parser.add_argument('-n', '--num-headers', type=int, default=10, help='Number of headers to add per request')
     
     counter = 1
     args = parser.parse_args()
