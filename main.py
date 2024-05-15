@@ -24,7 +24,7 @@ def main():
     parser.add_argument('-c', '--canary', default="x1x2x3x4x5", help='Canary value')
     parser.add_argument('-n', '--num-headers', type=int, default=10, help='Number of headers to add per request')
     
-    counter = 1
+    
     args = parser.parse_args()
 
     split = args.num_headers
@@ -39,6 +39,7 @@ def main():
         return
 
     for url in urls:
+        counter = 1
         headers = {
             'User-Agent': user_agent
         }
